@@ -64,13 +64,20 @@
     <section>
         <h3>Unfinished Business</h3>
         <ul>
-            <li></li>
+            <li>Decide cake flavor</li>
+            <li>Choose message to be written on cake</li>
+            <li>What color balloons do we want?</li>
         </ul>
+        <img src="/assets/giraffe.jpg" alt="Image of the giraffe"/>
     </section>
     <main>
         <h3>New Business</h3>
         <ul>
-            <li></li>
+            <li>Giraffe drop-off time</li>
+            <details>
+                <summary>Giraffe Handler Contact Info</summary>
+                01189998819991197253
+            </details>
         </ul>
     </main>
     <section>
@@ -79,8 +86,62 @@
             <li>How we will keep the <i>Giraffa camelopardalis</i> a surprise until lunch?</li>
         </ul>
     </section>
+    <section>
+        <h3>Meeting Recording:</h3>
+        <div>
+            <video controls src="/assets/meetingrecording.mov" type="video/mov" width="500px"></video>
+        </div>
+        <div>
+            <audio controls src="/assets/meetingrecording.mp3"></audio>
+        </div>
+    </section>
+    <section>
+        <h3>Cake Order Form</h3>
+        <form id="cake-flavor" method="post">
+            <fieldset>
+                <legend>Vote for the cake flavor we will order</legend>
+                <input type="radio" id="chocolate" name="cake"/>
+                <label for="chocolate">Chocolate</label><br/>
+                <input type="radio" id="red-velvet" name="cake"/>
+                <label for="red-velvet">Red Velvet</label><br/>
+                <input type="radio" id="tres-leches" name="cake"/>
+                <label for="tres-leches">Tres Leches</label>
+            </fieldset>
+            <div id="candles">
+                <label for="candle-choice">Choose a type of candle:</label>
+                <input list="candle-types" id="candle-choice" name="candle-choice"/>
+                <datalist id="candle-types">
+                    <option value="Numbers"></option>
+                    <option value="Sparklers"></option>
+                    <option value="Colored Flame"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="frosting-select">
+                    Choose how much frosting to put on the cake:
+                </label>
+                <select id="frosting-select">
+                    <option value="">---Please select an option---</option>
+                    <option value="thin">Thin layer of frosting</option>
+                    <option value="moderate">Moderate amount of frosting</option>
+                    <option value="heavy">Heaps of frosting</option>
+                    <option value="none">No frosting</option>
+                </select>
+            </div>
+            <textarea id="birthday-message" name="birthday-message" cols="50">Write a nice birthday message here for the Boss...</textarea><br/>
+            <div id="sign">
+                <input type="checkbox" id="consent"/>
+                <label for="consent">Check this box to confirm you will chip in for the cake order.</label><br/>
+                <input type="text" id="name"/>
+                <label for="name">Enter your name here.</label><br/>
+                <input type="date" id="signing-date"/>
+                <label for="signing-date">Enter today's date.</label>
+            </div>
+            <button type="button">Submit order</button>
+        </form>
+    </section>
     <footer>
-
+        These meeting notes were authored by Cadie.
     </footer>
   </body>
 </html>
