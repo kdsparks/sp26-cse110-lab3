@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-https://kdsparks.github.io/Lab2/
+# Lab 3
+https://kdsparks.github.io/sp26-cse110-lab3/
