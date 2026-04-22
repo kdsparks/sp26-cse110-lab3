@@ -1,0 +1,104 @@
+:root {
+  --navy-blue: #102D49;
+}
+
+* {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#meeting-name {
+    background-color: var(--navy-blue, darkblue);
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 20px;
+}
+
+h2 {
+    background-color: rgb(27, 81, 133);
+    color: color(display-p3 0.9184 0.9553 0.9955);
+}
+
+h3 {
+    background-color: hsl(37, 100%, 76.5%);
+    font-size: 1.5rem;
+}
+
+#giraffe {
+    border-style: groove;
+    border-color: #B3DAFF;
+    border-width: 20px;
+    border-radius: 25%;
+    height: 25%;
+    width: fit-content;
+    max-width: max-content;
+    min-width: 100px;
+    position: static;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#giraffe:hover {
+    border-color: transparent;
+}
+
+.form-buttons {
+    background-color: color-mix(in oklab, teal 80%, olive 20%);
+}
+
+.form-buttons:active {
+    background-color: color-mix(in oklab, teal 20%, olive 80%);
+}
+
+#hide-me {
+    display: none;
+    margin: auto;
+}
+
+.playwrite-nz-guides-regular {
+    font-family: "Playwrite NZ Guides", cursive;
+    font-style: normal;
+}
+
+video, audio {
+    border: 1.2rem solid lightblue;
+    margin: 10px 20px 10px 20px; /* top right bottom left */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+}
+
+.members {
+    display: inline-block;
+}
+
+@media (width <= 1450px) {
+    
+}
+
+span.members {
+    background-color: aliceblue;
+}
+
+ul li { /* descendant combinator */
+    padding: 10px;
+}
+
+details > summary { /* child combinator */
+    text-decoration: pink wavy underline;
+}
+
+fieldset ~ div { /* general sibling combinator */
+    margin: 20px;
+}
+
+video + audio { /* adjacent sibling combinator */
+    border: solid gray 1.5rem;
+}

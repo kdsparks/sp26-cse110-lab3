@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <title>Boss' Birthday Party Planning Meeting</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
     <meta name="author" content="Cadie Sparks">
   </head>
   <body>
     <header>
-        <h1>Planning Meeting for Boss' Birthday Party</h1>
-        <h2>Check-In</h2>
+        <h1 id="meeting-name">Planning Meeting for Boss' Birthday Party</h1>
+        <h2 class="playwrite-nz-guides-regular">Check-In</h2>
         <h3>Tuesday, April 14</h3>
     </header>
     <nav class="table-of-contents">
@@ -32,23 +35,25 @@
     </nav>
     <section>
         <h3>Attendance</h3>
-        <p>Members Present:</p>
-        <ul>
-            <li>Abas</li>
-            <li>Adam</li>
-            <li>Andre</li>
-            <li>Anvik</li>
-            <li>Christine</li>
-            <li>Esha</li>
-            <li>Iban</li>
-            <li>Jad</li>
-            <li>Noah</li>
-            <li>Yezhi</li>
-        </ul>
-        <p>Members Not Present:</p>
-        <ul>
-            <li>Cadie</li>
-        </ul>
+        <span class="members">Members Present:
+            <ul>
+                <li>Abas</li>
+                <li>Adam</li>
+                <li>Andre</li>
+                <li>Anvik</li>
+                <li>Christine</li>
+                <li>Esha</li>
+                <li>Iban</li>
+                <li>Jad</li>
+                <li>Noah</li>
+                <li>Yezhi</li>
+            </ul>
+        </span>
+        <span class="members">Members Not Present:
+            <ul>
+                <li>Cadie</li>
+            </ul>
+        </span>
     </section>
     <section>
         <h3>Agenda</h3>
@@ -58,7 +63,7 @@
                 We will be deciding the cake flavor and design, initiating the balloon order, and confirming the drop-off time with the giraffe handler.
             </p>
             <hr>
-            <span>It is <strong>very important that these notes are not shared with the Boss!</strong> Let's keep the party a <em>surprise</em>.</span>
+            <span id="hide-me">It is <strong>very important that these notes are not shared with the Boss!</strong> Let's keep the party a <em>surprise</em>.</span>
         </div>
     </section>
     <section>
@@ -68,7 +73,7 @@
             <li>Choose message to be written on cake</li>
             <li>What color balloons do we want?</li>
         </ul>
-        <img src="assets/giraffe.jpg" alt="Image of the giraffe">
+        <img id="giraffe" src="assets/giraffe.jpg" alt="Image of the giraffe">
     </section>
     <main>
         <h3>New Business</h3>
@@ -76,9 +81,9 @@
             <li>Giraffe drop-off time</li>
         </ul>
         <details>
-                <summary>Giraffe Handler Contact Info</summary>
+            <summary>Giraffe Handler Contact Info</summary>
                 01189998819991197253
-            </details>
+        </details>
     </main>
     <section>
         <h3>Additional Comments and Concerns</h3>
@@ -88,12 +93,8 @@
     </section>
     <section>
         <h3>Meeting Recording:</h3>
-        <div>
-            <video controls src="assets/meetingrecording.mov" width="500"></video>
-        </div>
-        <div>
-            <audio controls src="assets/meetingrecording.mp3"></audio>
-        </div>
+        <video controls src="assets/meetingrecording.mov" width="500"></video>
+        <audio controls src="assets/meetingrecording.mp3"></audio>
     </section>
     <section>
         <h3>Cake Order Form</h3>
@@ -137,7 +138,7 @@
                 <input type="date" id="signing-date">
                 <label for="signing-date">Enter today's date.</label>
             </div>
-            <button type="button">Submit order</button>
+            <button class="form-buttons" type="button">Submit order</button>
         </form>
     </section>
     <footer>
