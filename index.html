@@ -5,81 +5,70 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+          rel="stylesheet">
     <meta name="author" content="Cadie Sparks">
   </head>
   <body>
     <header>
         <h1 id="meeting-name">Planning Meeting for Boss' Birthday Party</h1>
-        <h2 class="playwrite-nz-guides-regular">Check-In</h2>
-        <h3>Tuesday, April 14</h3>
     </header>
+    <div>
+        <h2 id="meeting-type">Check-In:  Tuesday, April 14</h2>
+    </div>
     <nav class="table-of-contents">
-        <ol>
-            <li>
-                <a href="#">Attendance List</a>
-            </li>
-            <li>
-                <a href="#">Agenda</a>
-            </li>
-            <li>
-                <a href="#">Unfinished Business</a>
-            </li>
-            <li>
-                <a href="#">New Business</a>
-            </li>
-            <li>
-                <a href="#">Additional Comments</a>
-            </li>
-        </ol>
+        <a href="#">Attendance List</a>
+        <a href="#">Agenda</a>
+        <a href="#">Unfinished Business</a>
+        <a href="#">New Business</a>
+        <a href="#">Additional Comments</a>
+        <a href="#">Recording</a>
+        <a href="#">Cake Order</a>
     </nav>
     <section>
         <h3>Attendance</h3>
-        <span class="members">Members Present:
-            <ul>
-                <li>Abas</li>
-                <li>Adam</li>
-                <li>Andre</li>
-                <li>Anvik</li>
-                <li>Christine</li>
-                <li>Esha</li>
-                <li>Iban</li>
-                <li>Jad</li>
-                <li>Noah</li>
-                <li>Yezhi</li>
-            </ul>
-        </span>
-        <span class="members">Members Not Present:
-            <ul>
-                <li>Cadie</li>
-            </ul>
-        </span>
+        <p>Members Present:</p>
+        <div class="members">
+            <span>Abas</span>
+            <span>Adam</span>
+            <span>Andre</span>
+            <span>Anvik</span>
+            <span>Christine</span>
+            <span>Esha</span>
+            <span>Iban</span>
+            <span>Jad</span>
+            <span>Noah</span>
+            <span>Yezhi</span>
+        </div>
+        <p>Members Not Present: Cadie</p>
     </section>
     <section>
         <h3>Agenda</h3>
-        <div>
-            <p>
-                Today we will be conducting a check-in meeting for the progress on the planning for the <b>Boss' birthday party</b>.<br>
-                We will be deciding the cake flavor and design, initiating the balloon order, and confirming the drop-off time with the giraffe handler.
-            </p>
+        <p>
+            Today we will be conducting a check-in meeting for the progress on the planning for the <b>Boss' birthday party</b>.<br>
+            We will be deciding the cake flavor and design, initiating the balloon order, and confirming the drop-off time with the giraffe handler.
             <hr>
             <span id="hide-me">It is <strong>very important that these notes are not shared with the Boss!</strong> Let's keep the party a <em>surprise</em>.</span>
-        </div>
+        </p>
     </section>
     <section>
         <h3>Unfinished Business</h3>
-        <ul>
-            <li>Decide cake flavor</li>
-            <li>Choose message to be written on cake</li>
-            <li>What color balloons do we want?</li>
-        </ul>
+        <div id="to-do">
+            <ul>
+                <li>Decide cake flavor</li>
+                <li>Choose message to be written on cake</li>
+                <li>What color balloons do we want?</li>
+            </ul>
+        </div>
         <img id="giraffe" src="assets/giraffe.jpg" alt="Image of the giraffe">
     </section>
     <main>
         <h3>New Business</h3>
-        <ul>
-            <li>Giraffe drop-off time</li>
-        </ul>
+        <div id="new-biz">
+            <ul>
+                <li>Giraffe drop-off time</li>
+            </ul>
+        </div>
         <details>
             <summary>Giraffe Handler Contact Info</summary>
                 01189998819991197253
@@ -87,9 +76,11 @@
     </main>
     <section>
         <h3>Additional Comments and Concerns</h3>
-        <ul>
-            <li>How we will keep the <i>Giraffa camelopardalis</i> a surprise until lunch?</li>
-        </ul>
+        <div id="comments">
+            <ul>
+                <li>How we will keep the <i>Giraffa camelopardalis</i> a surprise until lunch?</li>
+            </ul>
+        </div>
     </section>
     <section>
         <h3>Meeting Recording:</h3>
@@ -108,16 +99,15 @@
                 <input type="radio" id="tres-leches" name="cake">
                 <label for="tres-leches">Tres Leches</label>
             </fieldset>
-            <div id="candles">
+            <div class="choice">
                 <label for="candle-choice">Choose a type of candle:</label>
                 <input list="candle-types" id="candle-choice" name="candle-choice">
                 <datalist id="candle-types">
                     <option value="Numbers"></option>
                     <option value="Sparklers"></option>
                     <option value="Colored Flame"></option>
-                </datalist>
-            </div>
-            <div>
+                </datalist><br>
+            
                 <label for="frosting-select">
                     Choose how much frosting to put on the cake:
                 </label>
@@ -127,9 +117,11 @@
                     <option value="moderate">Moderate amount of frosting</option>
                     <option value="heavy">Heaps of frosting</option>
                     <option value="none">No frosting</option>
-                </select>
+                </select><br>
+
+                <textarea id="birthday-message" name="birthday-message" cols="50">Write a nice birthday message here for the Boss...</textarea><br>
             </div>
-            <textarea id="birthday-message" name="birthday-message" cols="50">Write a nice birthday message here for the Boss...</textarea><br>
+            
             <div id="sign">
                 <input type="checkbox" id="consent">
                 <label for="consent">Check this box to confirm you will chip in for the cake order.</label><br>

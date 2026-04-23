@@ -5,15 +5,31 @@
 * {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    font-size: 1.5rem;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header {
+    position: sticky;
+    top: 20px;
 }
 
 #meeting-name {
     background-color: var(--navy-blue, darkblue);
     color: white;
     text-align: center;
-    position: sticky;
-    top: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+#meeting-type {
+    padding: 10px 20px 10px 20px;
+}
+
+.table-of-contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 h2 {
@@ -47,22 +63,9 @@ h3 {
     border-color: transparent;
 }
 
-.form-buttons {
-    background-color: color-mix(in oklab, teal 80%, olive 20%);
-}
-
-.form-buttons:active {
-    background-color: color-mix(in oklab, teal 20%, olive 80%);
-}
-
 #hide-me {
     display: none;
     margin: auto;
-}
-
-.playwrite-nz-guides-regular {
-    font-family: "Playwrite NZ Guides", cursive;
-    font-style: normal;
 }
 
 video, audio {
@@ -76,7 +79,11 @@ video, audio {
 }
 
 .members {
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
 }
 
 @media (width <= 1450px) {
@@ -100,5 +107,26 @@ fieldset ~ div { /* general sibling combinator */
 }
 
 video + audio { /* adjacent sibling combinator */
-    border: solid gray 1.5rem;
+    /*background-color: solid gray 1.5rem;*/
+}
+
+.form-buttons {
+    background-color: color-mix(in oklab, gray 20%, white 80%);
+}
+
+.form-buttons:active {
+    background-color: color-mix(in oklab, gray 80%, white 20%);
+}
+
+.choice {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+div > textarea {
+    margin-left: 1.5rem;
 }
